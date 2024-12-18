@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 public class KRotate {
     public static void main(String args[]){
@@ -13,6 +14,9 @@ public class KRotate {
             int k = sc.nextInt();
             if(k < n)
                 Rotate.kRotation(a, k);
+            else{
+                System.out.println("K out or range");
+            }
         }
     }
 }
@@ -27,9 +31,14 @@ class Rotate{
         for(int i = 0, j = k; i < (n - k) && j < n; i++, j++){
             b[j] = a[i];
         }
-        for (int i = 0; i < n; i++){
-            System.out.println(b[i]);
+       // for (int i = 0; i < n; i++){
+          //  System.out.println(b[i]);
+        //}
+        ArrayList<Integer> arrayList = new ArrayList<>();
+        for (int num : b) {
+            arrayList.add(num);
         }
+        System.out.println(arrayList);
     }
 }
 
